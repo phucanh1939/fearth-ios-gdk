@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage              = 'https://github.com/phucanh1939/fearth-ios-gdk'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.author                = { 'phucanh' => 'phucanh1939@gmail.com' }
-  s.source                = { :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => s.version.to_s }
+  s.source                = { :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => + s.version.to_s }
   s.ios.deployment_target = '11.0'
   s.source_files          = 'FearthGdk/Classes/**/*.{h,m,mm}', 'FearthGdk/Headers/**/*.{h,m,mm}'
   s.public_header_files   = 'FearthGdk/Headers/**/*.h'
