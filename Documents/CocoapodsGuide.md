@@ -59,4 +59,15 @@ pod lib lint --allow-warnings
 - It ensures that all public headers, source files, and dependencies are correct.
 - Fix issues if pod lib lint fails before proceeding.
 
-## Publish to Cocoapod ()
+## Publish to Cocoapod (public)
+
+Register a trunk session before publish:
+```sh
+# Register a trunk session
+pod trunk register your_email@example.com 'Your Name'
+```
+
+Publish the pod:
+```sh
+pod trunk push PodName.podspec
+```
