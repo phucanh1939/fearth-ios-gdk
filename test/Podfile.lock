@@ -1,0 +1,16 @@
+PODS:
+  - FearthGdk (0.4.0)
+
+DEPENDENCIES:
+  - FearthGdk (from `../`)
+
+EXTERNAL SOURCES:
+  FearthGdk:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FearthGdk: 600d27c5ecef6559a0929a5eb1aa9c4f40fff190
+
+PODFILE CHECKSUM: c4e3268f6ab1fcfa2c940ad7e93fcfbc0d60344f
+
+COCOAPODS: 1.15.2
