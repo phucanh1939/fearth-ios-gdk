@@ -14,8 +14,9 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/phucanh1939/fearth-ios-gdk'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'phucanh' => 'phucanh1939@gmail.com' }
-  s.source = { :http => "https://https://github.com/phucanh1939/fearth-ios-gdk/releases/download/v0.1.0/FearthGdk.xcframework.zip" }
-  s.ios.deployment_target = '11.0'
+  s.source = { :http => "https://github.com/phucanh1939/fearth-ios-gdk/releases/download/v#{s.version}/#{s.name}-v#{s.version}.zip" }
+  s.vendored_frameworks = "**/FearthGdk.xcframework"
+  s.ios.deployment_target = '12.0'
   # s.frameworks          = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
