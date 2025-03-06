@@ -30,3 +30,5 @@ Run `./upload_release.sh <version_tag>` to create or upload xcframework to a rel
 Make sure you create and upload framework file to Github release before publish the pod
 
 Run `./publish_pod.sh` to verify and publish the pod to cocoapods.
+
+After publishing the pod, you can find it here `https://cocoapods.org/pods/FearthGdk`

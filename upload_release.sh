@@ -3,6 +3,7 @@
 # Set variables
 FRAMEWORK_NAME="FearthGdk"
 FRAMEWORK_DIR="build/$FRAMEWORK_NAME.xcframework"  # Change to your actual framework path
+LICENSE_FILE="LICENSE"  # Ensure this file exists in the project root
 VERSION=$1  # Get version from the first script argument
 ZIP_FILE="$FRAMEWORK_NAME-$VERSION.zip"
 REPO=$(git config --get remote.origin.url | sed -E 's/.*github\.com[:\/]([^\/]+\/[^\.]+)(\.git)?/\1/')
@@ -21,10 +22,16 @@ if ! command -v gh &> /dev/null; then
     exit 1
 fi
 
+# Check if the LICENSE file exists
+if [ ! -f "$LICENSE_FILE" ]; then
+    echo "❌ Error: LICENSE file not found!"
+    exit 1
+fi
+
 # Create the ZIP file
 echo "📦 Creating zip file: $ZIP_FILE..."
 rm -f "$ZIP_FILE"
-zip -r "$ZIP_FILE" "$FRAMEWORK_DIR"
+zip -r "$ZIP_FILE" "$FRAMEWORK_DIR" "$LICENSE_FILE"
 
 # Check if the release exists
 if gh release view "$VERSION" --repo "$REPO" >/dev/null 2>&1; then
