@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set build configuration (default to Debug if not provided)
-BUILD_CONFIG=${1:-Debug}
+BUILD_CONFIG=${1:-Release}
 
 # Generate Xcode project
 sh ./gen_xcode.sh
