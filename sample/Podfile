@@ -5,8 +5,12 @@ target 'fearth-ios-gdk-sample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for fearth-ios-gdk-sample
-  pod 'FearthGdk', :path => '../'
-  # pod 'FearthGdk', '~> 0.4'
+  # Using local pod
+  # pod 'FearthGdk', :path => '../'
 
+  # Using git repo
+  pod 'FearthGdk', :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => 'v0.4.0'
+  
+  # Using published pod on cocoapods
+  # pod 'FearthGdk', '~> 0.4'
 end

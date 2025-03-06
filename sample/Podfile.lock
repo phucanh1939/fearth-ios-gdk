@@ -2,15 +2,21 @@ PODS:
   - FearthGdk (0.4.0)
 
 DEPENDENCIES:
-  - FearthGdk (from `../`)
+  - FearthGdk (from `https://github.com/phucanh1939/fearth-ios-gdk.git`, tag `v0.4.0`)
 
 EXTERNAL SOURCES:
   FearthGdk:
-    :path: "../"
+    :git: https://github.com/phucanh1939/fearth-ios-gdk.git
+    :tag: v0.4.0
+
+CHECKOUT OPTIONS:
+  FearthGdk:
+    :git: https://github.com/phucanh1939/fearth-ios-gdk.git
+    :tag: v0.4.0
 
 SPEC CHECKSUMS:
   FearthGdk: 600d27c5ecef6559a0929a5eb1aa9c4f40fff190
 
-PODFILE CHECKSUM: c4e3268f6ab1fcfa2c940ad7e93fcfbc0d60344f
+PODFILE CHECKSUM: 24efa848de46fdc407d9d4b36255f2e5df6cf6b8
 
 COCOAPODS: 1.15.2
