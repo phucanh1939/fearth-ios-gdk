@@ -1,5 +1,4 @@
 #import "FearthGdk.h"
-#import "FearthGdkPrivate.h"
 
 @implementation FearthGdk
 

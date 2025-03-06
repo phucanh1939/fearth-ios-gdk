@@ -4,7 +4,7 @@
 BUILD_CONFIG=${1:-Release}
 
 # Generate Xcode project
-sh ./gen_xcode.sh
+sh ./genxcode.sh
 
 # Build for iOS (Device: arm64)
 cmake --build build/ --config "$BUILD_CONFIG" -- -sdk iphoneos
