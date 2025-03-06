@@ -27,7 +27,7 @@ Run `./upload_release.sh <version_tag>` to create or upload xcframework to a rel
 
 ## Verify & Publish Pod
 
-Make sure you create and upload framework file to Github release before publish the pod
+Make sure you create release tag before publish the pod (check the version in `podspec`)
 
 Run `./publish_pod.sh` to verify and publish the pod to cocoapods.
 
