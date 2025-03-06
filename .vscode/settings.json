@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "*.h": "objective-c"
+        "*.luau": "lua",
+        "*.h": "objective-c",
+        "iostream": "cpp"
     }
 }
