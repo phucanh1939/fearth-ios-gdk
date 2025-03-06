@@ -3,8 +3,7 @@
 
 @implementation FearthGdk
 
-+ (NSString *)greet:(NSString *)name
-{
++ (NSString *)greet:(NSString *)name {
     return [NSString stringWithFormat:@"Hello, %@! Welcome to FearthGdk.", name];
 }
 

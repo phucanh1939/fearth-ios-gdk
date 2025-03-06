@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/FearthGdk/Headers"
+                "${workspaceFolder}/include"
             ],
             "defines": [],
             "macFrameworkPath": [
