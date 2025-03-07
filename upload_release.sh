@@ -2,7 +2,7 @@
 
 # Set variables
 FRAMEWORK_NAME="FearthGdk"
-FRAMEWORK_DIR="build/$FRAMEWORK_NAME.xcframework"  # Change to your actual framework path
+FRAMEWORK_DIR="build/Release-iphoneos/$FRAMEWORK_NAME.framework"  # Change to your actual framework path
 LICENSE_FILE="LICENSE"  # Ensure this file exists in the project root
 VERSION=$1  # Get version from the first script argument
 ZIP_FILE="$FRAMEWORK_NAME-$VERSION.zip"
@@ -28,10 +28,16 @@ if [ ! -f "$LICENSE_FILE" ]; then
     exit 1
 fi
 
+# Check if the framework exists
+if [ ! -d "$FRAMEWORK_DIR" ]; then
+    echo "❌ Error: Framework directory not found at $FRAMEWORK_DIR!"
+    exit 1
+fi
+
 # Create the ZIP file
 echo "📦 Creating zip file: $ZIP_FILE..."
 rm -f "$ZIP_FILE"
-zip -r "$ZIP_FILE" "$FRAMEWORK_DIR" "$LICENSE_FILE"
+zip -r "$ZIP_FILE" "$FRAMEWORK_DIR" "$LICENSE_FILE" --junk-paths
 
 # Check if the release exists
 if gh release view "$VERSION" --repo "$REPO" >/dev/null 2>&1; then

@@ -1,22 +1,31 @@
 PODS:
-  - FearthGdk (0.4.0)
+  - FearthGdk (0.4.0):
+    - TrustWalletCore
+  - SwiftProtobuf (1.29.0)
+  - TrustWalletCore (4.2.13):
+    - TrustWalletCore/Core (= 4.2.13)
+  - TrustWalletCore/Core (4.2.13):
+    - TrustWalletCore/Types
+  - TrustWalletCore/Types (4.2.13):
+    - SwiftProtobuf
 
 DEPENDENCIES:
-  - FearthGdk (from `https://github.com/phucanh1939/fearth-ios-gdk.git`, tag `v0.4.0`)
+  - FearthGdk (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SwiftProtobuf
+    - TrustWalletCore
 
 EXTERNAL SOURCES:
   FearthGdk:
-    :git: https://github.com/phucanh1939/fearth-ios-gdk.git
-    :tag: v0.4.0
-
-CHECKOUT OPTIONS:
-  FearthGdk:
-    :git: https://github.com/phucanh1939/fearth-ios-gdk.git
-    :tag: v0.4.0
+    :path: "../"
 
 SPEC CHECKSUMS:
-  FearthGdk: 600d27c5ecef6559a0929a5eb1aa9c4f40fff190
+  FearthGdk: 4c606e01ce47b0046bf4b00e59427d5eaada927c
+  SwiftProtobuf: b7aa08087e2ab6d162862d143020091254095f69
+  TrustWalletCore: c8f02dd6830fbc8db365c9174191d3e07941df36
 
-PODFILE CHECKSUM: 24efa848de46fdc407d9d4b36255f2e5df6cf6b8
+PODFILE CHECKSUM: f55abb272900feb230559ce106b18365f8dd16a1
 
 COCOAPODS: 1.15.2

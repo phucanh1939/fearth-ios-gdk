@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import <FearthGdk/FearthHelper.h>
+#import <FearthGdk/FearthWalletHelper.h>
 
 @interface ViewController ()
 
@@ -22,7 +23,14 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     // [FearthHelper openURL:@"https://google.com"];
-    [FearthHelper openURLInAppBrowser:@"https://google.com" fromViewController:self];
+    // [FearthHelper openURLInAppBrowser:@"https://google.com" fromViewController:self];
+    NSString* phrase = [FearthWalletHelper createWallet];
+    NSLog(@"________ phrase = %@", phrase);
+    NSString* address = [FearthWalletHelper addressFromPhrase:phrase];
+    NSLog(@"________ address = %@", address);
+    NSString* signature = [FearthWalletHelper signMessage:@"testMessage" withPhrase:phrase];
+    NSLog(@"________ signature = %@", signature);
+
 }
 
 

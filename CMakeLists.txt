@@ -15,7 +15,8 @@ enable_language(OBJC OBJCXX)
 set(CMAKE_SYSTEM_NAME "iOS")
 set(CMAKE_OSX_SYSROOT "iphoneos")
 set(CMAKE_IOS_DEPLOYMENT_TARGET "12.0")
-set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
+# set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
+set(CMAKE_OSX_ARCHITECTURES "arm64")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fobjc-arc") # Turn on ARC
 
 # Info.plist
@@ -69,6 +70,7 @@ set_target_properties(${FRAMEWORK_NAME} PROPERTIES
     XCODE_ATTRIBUTE_ENABLE_BITCODE "NO"
     XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY ${DEVICE_FAMILY}
     XCODE_ATTRIBUTE_SKIP_INSTALL "YES"
+    FRAMEWORK_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/frameworks"
 )
 
 # Specify the include directories for the framework
@@ -77,4 +79,9 @@ target_include_directories(${FRAMEWORK_NAME} PUBLIC ${FRAMEWORK_INCLUDE_DIRS})
 # Frameworks
 target_link_libraries(${FRAMEWORK_NAME} "-framework UIKit")
 target_link_libraries(${FRAMEWORK_NAME} "-framework SafariServices")
-# target_link_libraries(${FRAMEWORK_NAME} "-framework SystemConfiguration") # used by jsonmodel
+
+find_library(WALLET_CORE_FRAMEWORK
+    NAMES WalletCore
+    PATHS ${CMAKE_SOURCE_DIR}/frameworks
+    REQUIRED NO_DEFAULT_PATH)
+target_link_libraries(${FRAMEWORK_NAME} ${WALLET_CORE_FRAMEWORK})

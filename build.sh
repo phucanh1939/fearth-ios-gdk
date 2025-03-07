@@ -9,12 +9,11 @@ sh ./genxcode.sh
 # Build for iOS (Device: arm64)
 cmake --build build/ --config "$BUILD_CONFIG" -- -sdk iphoneos
 
-# Build for iOS Simulator (arm64 & x86_64)
-cmake --build build/ --config "$BUILD_CONFIG" -- -sdk iphonesimulator
+# # Build for iOS Simulator (arm64 & x86_64)
+# cmake --build build/ --config "$BUILD_CONFIG" -- -sdk iphonesimulator
 
-# shellcheck disable=SC2086
-# Create the .xcframework
-xcodebuild -create-xcframework \
-  -framework build/${BUILD_CONFIG}-iphoneos/FearthGdk.framework \
-  -framework build/${BUILD_CONFIG}-iphonesimulator/FearthGdk.framework \
-  -output build/FearthGdk.xcframework
+# # Create the .xcframework
+# xcodebuild -create-xcframework \
+#   -framework build/${BUILD_CONFIG}-iphoneos/FearthGdk.framework \
+#   -framework build/${BUILD_CONFIG}-iphonesimulator/FearthGdk.framework \
+#   -output build/FearthGdk.xcframework

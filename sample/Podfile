@@ -6,10 +6,10 @@ target 'fearth-ios-gdk-sample' do
   use_frameworks!
 
   # Using local pod
-  # pod 'FearthGdk', :path => '../'
+  pod 'FearthGdk', :path => '../'
 
   # Using git repo
-  pod 'FearthGdk', :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => 'v0.4.0'
+  # pod 'FearthGdk', :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => 'v0.4.0'
   
   # Using published pod on cocoapods
   # pod 'FearthGdk', '~> 0.4'
