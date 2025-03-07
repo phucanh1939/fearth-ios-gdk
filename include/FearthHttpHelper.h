@@ -1,5 +1,5 @@
-#ifndef NE_HTTP_HELPER_H
-#define NE_HTTP_HELPER_H
+#ifndef FearthHttpHelper_h
+#define FearthHttpHelper_h
 
 #import <Foundation/Foundation.h>
 
@@ -12,4 +12,4 @@
 
 @end
 
-#endif /* NE_HTTP_HELPER_H */
+#endif /* FearthHttpHelper_h */

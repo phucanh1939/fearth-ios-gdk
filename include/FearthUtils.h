@@ -1,14 +1,14 @@
-#ifndef FearthHelper_h
-#define FearthHelper_h
+#ifndef FearthUtils_h
+#define FearthUtils_h
 
 #import <Foundation/Foundation.h>
 #import <SafariServices/SafariServices.h>
 
-@interface FearthHelper : NSObject
+@interface FearthUtils : NSObject
 
 + (void)openURL:(NSString *)url;
 + (void)openURLInAppBrowser:(NSString *)url fromViewController:(UIViewController *)viewController;
 
 @end
 
-#endif /* FearthHelper_h */
+#endif /* FearthUtils_h */

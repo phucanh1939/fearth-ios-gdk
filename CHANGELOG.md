@@ -1,5 +1,10 @@
 # Change Log
 
+## [v.0.7.0] - 2025/03/07
+
+### Added
+- FearthGdk main functions: initialize, createWallet
+
 ## [v.0.6.0] - 2025/03/07
 
 ### Added

@@ -2,10 +2,16 @@
 #define FearthGdk_h
 
 #import <Foundation/Foundation.h>
+#import "FearthGdkConfig.h"
+
+typedef void (^FearthInitCallback)(NSInteger errorCode);
 
 @interface FearthGdk : NSObject
 
-+ (NSString *)greet:(NSString *)name;
++ (instancetype)sharedInstance;
+
+- (void)initialize:(FearthGdkConfig*)config callback:(FearthInitCallback)callback;
+- (NSString *)createWallet;
 
 @end
 

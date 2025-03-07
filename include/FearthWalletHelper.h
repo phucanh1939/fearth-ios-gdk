@@ -1,5 +1,5 @@
-#ifndef FEARTH_WALLET_HELPER_H
-#define FEARTH_WALLET_HELPER_H
+#ifndef FearthWalletHelper_h
+#define FearthWalletHelper_h
 
 #import <Foundation/Foundation.h>
 

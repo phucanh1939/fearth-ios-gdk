@@ -6,10 +6,11 @@
 //
 
 #import "ViewController.h"
-#import <FearthGdk/FearthHelper.h>
+#import <FearthGdk/FearthUtils.h>
 #import <FearthGdk/FearthWalletHelper.h>
 #import <FearthGdk/FearthJsonHelper.h>
 #import <FearthGdk/FearthHttpHelper.h>
+#import <FearthGdk/FearthGdk.h>
 
 @interface ViewController ()
 
@@ -31,8 +32,8 @@
 }
 
 - (void)testURL {
-    [FearthHelper openURL:@"https://google.com"];
-    [FearthHelper openURLInAppBrowser:@"https://google.com" fromViewController:self];
+    [FearthUtils openURL:@"https://google.com"];
+    [FearthUtils openURLInAppBrowser:@"https://google.com" fromViewController:self];
 }
 
 - (void)testWallet {
@@ -100,7 +101,16 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self testHttp];
+    
+    FearthGdkConfig *config = [[FearthGdkConfig alloc] init];
+    config.id = 123;
+    config.name = @"MyGame";
+    [FearthGdk.sharedInstance initialize:config callback:^(NSInteger errorCode){
+        NSLog(@"Init status: %ld", errorCode);
+    }];
+    
+    NSString* phrase = [FearthGdk.sharedInstance createWallet];
+    NSLog(@"Phrase = %@", phrase);
 }
 
 @end

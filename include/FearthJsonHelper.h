@@ -1,5 +1,5 @@
-#ifndef NE_JSON_HELPER_H
-#define NE_JSON_HELPER_H
+#ifndef FearthJsonHelper_h
+#define FearthJsonHelper_h
 
 #import <Foundation/Foundation.h>
 
