@@ -1,5 +1,11 @@
 # Change Log
 
+## [v.0.6.0] - 2025/03/07
+
+### Added
+- JsonHelper
+- HttpHelper
+
 ## [v.0.5.0] - 2025/03/07
 
 ### Added
