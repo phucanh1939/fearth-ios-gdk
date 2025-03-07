@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'FearthGdk'
-  s.version = '0.5.0'
+  s.version = '0.6.0'
   s.summary = 'Fearth Game Development Kit'
   s.description = 'Includes needed functions for a game on iOS'
   s.homepage = 'https://github.com/phucanh1939/fearth-ios-gdk'

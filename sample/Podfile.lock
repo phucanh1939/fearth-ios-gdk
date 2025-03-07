@@ -1,5 +1,5 @@
 PODS:
-  - FearthGdk (0.4.0):
+  - FearthGdk (0.6.0):
     - TrustWalletCore
   - SwiftProtobuf (1.29.0)
   - TrustWalletCore (4.2.13):
@@ -22,10 +22,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FearthGdk: 4c606e01ce47b0046bf4b00e59427d5eaada927c
+  FearthGdk: 57a6cf28ee699ff915e34d8981c941128b62709b
   SwiftProtobuf: b7aa08087e2ab6d162862d143020091254095f69
   TrustWalletCore: c8f02dd6830fbc8db365c9174191d3e07941df36
 
-PODFILE CHECKSUM: f55abb272900feb230559ce106b18365f8dd16a1
+PODFILE CHECKSUM: 38cef64536df585c27a0fbfb4ee93f6a91122d18
 
 COCOAPODS: 1.15.2
