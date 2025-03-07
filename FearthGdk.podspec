@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'phucanh' => 'phucanh1939@gmail.com' }
   # s.source = { :http => "https://github.com/phucanh1939/fearth-ios-gdk/releases/download/v#{s.version}/#{s.name}-v#{s.version}.zip" }
-  # s.vendored_frameworks = "**/FearthGdk.xcframework"
-  s.source = { :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => s.version.to_s }
+  # s.vendored_frameworks = "**/FearthGdk.framework"
+  s.source = { :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => "v#{s.version}" }
   s.source_files = 'src/**/*.{h,m,mm}', 'include/**/*.{h,m,mm}'
   s.public_header_files  = 'include/**/*.h'
   s.requires_arc = true
