@@ -34,10 +34,18 @@ if [ ! -d "$FRAMEWORK_DIR" ]; then
     exit 1
 fi
 
+# Create a temporary directory for zipping
+TEMP_DIR=$(mktemp -d)
+cp -R "$FRAMEWORK_DIR" "$TEMP_DIR/"
+cp "$LICENSE_FILE" "$TEMP_DIR/"
+
 # Create the ZIP file
 echo "📦 Creating zip file: $ZIP_FILE..."
 rm -f "$ZIP_FILE"
-zip -r "$ZIP_FILE" "$FRAMEWORK_DIR" "$LICENSE_FILE" --junk-paths
+(cd "$TEMP_DIR" && zip -r "$OLDPWD/$ZIP_FILE" "$FRAMEWORK_NAME.framework" "$LICENSE_FILE")
+
+# Cleanup temporary directory
+rm -rf "$TEMP_DIR"
 
 # Check if the release exists
 if gh release view "$VERSION" --repo "$REPO" >/dev/null 2>&1; then
@@ -54,6 +62,7 @@ gh release upload "$VERSION" "$ZIP_FILE" --repo "$REPO" --clobber
 echo "✅ File uploaded successfully!"
 echo "🔗 Release ZIP URL: $ZIP_URL"
 
+# Cleanup
 echo "🗑 Deleting local zip file: $ZIP_FILE..."
 rm -f "$ZIP_FILE"
 echo "✅ ZIP file deleted!"
