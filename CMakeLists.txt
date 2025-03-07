@@ -85,3 +85,9 @@ find_library(WALLET_CORE_FRAMEWORK
     PATHS ${CMAKE_SOURCE_DIR}/frameworks
     REQUIRED NO_DEFAULT_PATH)
 target_link_libraries(${FRAMEWORK_NAME} ${WALLET_CORE_FRAMEWORK})
+
+find_library(SWIFT_PROTOBUF_FRAMEWORK
+    NAMES SwiftProtobuf
+    PATHS ${CMAKE_SOURCE_DIR}/frameworks
+    REQUIRED NO_DEFAULT_PATH)
+target_link_libraries(${FRAMEWORK_NAME} ${SWIFT_PROTOBUF_FRAMEWORK})
