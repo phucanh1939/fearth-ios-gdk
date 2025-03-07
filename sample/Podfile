@@ -9,8 +9,8 @@ target 'fearth-ios-gdk-sample' do
   # pod 'FearthGdk', :path => '../'
 
   # Using git repo
-  pod 'FearthGdk', :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => 'v0.6.0'
+  # pod 'FearthGdk', :git => 'https://github.com/phucanh1939/fearth-ios-gdk.git', :tag => 'v0.6.0'
   
   # Using published pod on cocoapods
-  # pod 'FearthGdk', '~> 0.6'
+  pod 'FearthGdk', '~> 0.6'
 end

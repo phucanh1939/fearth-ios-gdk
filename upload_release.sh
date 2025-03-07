@@ -4,6 +4,7 @@
 FRAMEWORK_NAME="FearthGdk"
 FRAMEWORK_DIR="build/Release-iphoneos/$FRAMEWORK_NAME.framework"  # Change to your actual framework path
 LICENSE_FILE="LICENSE"  # Ensure this file exists in the project root
+PODSPEC_FILE="FearthGdk.release.podspec"  # Ensure this file exists in the project root
 VERSION=$1  # Get version from the first script argument
 ZIP_FILE="$FRAMEWORK_NAME-$VERSION.zip"
 REPO=$(git config --get remote.origin.url | sed -E 's/.*github\.com[:\/]([^\/]+\/[^\.]+)(\.git)?/\1/')
@@ -38,11 +39,12 @@ fi
 TEMP_DIR=$(mktemp -d)
 cp -R "$FRAMEWORK_DIR" "$TEMP_DIR/"
 cp "$LICENSE_FILE" "$TEMP_DIR/"
+cp "$PODSPEC_FILE" "$TEMP_DIR/$FRAMEWORK_NAME.podspec"
 
 # Create the ZIP file
 echo "📦 Creating zip file: $ZIP_FILE..."
 rm -f "$ZIP_FILE"
-(cd "$TEMP_DIR" && zip -r "$OLDPWD/$ZIP_FILE" "$FRAMEWORK_NAME.framework" "$LICENSE_FILE")
+(cd "$TEMP_DIR" && zip -r "$OLDPWD/$ZIP_FILE" "$FRAMEWORK_NAME.framework" "$LICENSE_FILE" "$FRAMEWORK_NAME.podspec")
 
 # Cleanup temporary directory
 rm -rf "$TEMP_DIR"

@@ -10,22 +10,19 @@ PODS:
     - SwiftProtobuf
 
 DEPENDENCIES:
-  - FearthGdk (from `../`)
+  - FearthGdk (~> 0.6)
 
 SPEC REPOS:
   trunk:
+    - FearthGdk
     - SwiftProtobuf
     - TrustWalletCore
-
-EXTERNAL SOURCES:
-  FearthGdk:
-    :path: "../"
 
 SPEC CHECKSUMS:
   FearthGdk: 57a6cf28ee699ff915e34d8981c941128b62709b
   SwiftProtobuf: b7aa08087e2ab6d162862d143020091254095f69
   TrustWalletCore: c8f02dd6830fbc8db365c9174191d3e07941df36
 
-PODFILE CHECKSUM: 38cef64536df585c27a0fbfb4ee93f6a91122d18
+PODFILE CHECKSUM: a6188880152e1ac4763c4b461af62d87265ac95c
 
 COCOAPODS: 1.15.2
